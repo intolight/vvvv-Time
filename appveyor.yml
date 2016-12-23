@@ -8,7 +8,7 @@ version: 0.0.4444 # this will be replaced
 
 environment:
 # change here!
-  packageVersion: 0.7
+  packageVersion: 0.7.6
 
 #nuget publish will fail if not Release
 configuration: Release
@@ -42,8 +42,6 @@ install:
 # having those helps appveyor perf tremendously
 cache: 
 - src/packages -> **\packages.config
-- copy -> copy
-- lib -> lib
 #- '%LocalAppData%\NuGet\Cache'
 
 # untried yet.
@@ -66,7 +64,7 @@ artifacts:
   name: vvvv-Time
   type: WebDeployPackage
 
-- path: build/AnyCPU/$(configuration)/vvvv-Time/core/.dll
+- path: build/AnyCPU/$(configuration)/vvvv-Time/core/*.dll
   name: dll
 
 - path: '**\VVVV.Packs.Time*.nupkg'
