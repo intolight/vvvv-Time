@@ -64,7 +64,7 @@ artifacts:
   name: vvvv-Time
   type: WebDeployPackage
 
-- path: build/AnyCPU/$(configuration)/vvvv-Time/core/*.dll
+- path: build/AnyCPU/$(configuration)/vvvv-Time/core/VVVV.Packs.Timing.dll
   name: dll
 
 - path: '**\VVVV.Packs.Time*.nupkg'
