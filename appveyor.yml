@@ -8,7 +8,7 @@ version: 0.0.4444 # this will be replaced
 
 environment:
 # change here!
-  packageVersion: 2.9.1
+  packageVersion: 0.7
 
 #nuget publish will fail if not Release
 configuration: Release
@@ -51,29 +51,29 @@ nuget:
   project_feed: true
 
 before_build:
-- ps: nuget restore src/vvvv-Message.sln -verbosity quiet
+- ps: nuget restore src/vvvv-Time.sln -verbosity quiet
 
 build:
-  project: src/vvvv-Message.sln
+  project: src/vvvv-Time.sln
   publish_wap: true
   verbosity: minimal
 
 after_build:
-- ps: nuget pack src/MessageCore/SharpMessage.nuspec -version "$env:nugetVersion"
+- ps: nuget pack src/Core/VVVV.Time.nuspec -version "$env:nugetVersion"
 
 test_script:
 - ps: vstest.console /Logger:Appveyor /InIsolation /Platform:x64 test\x64\Release\VVVV.Packs.Messaging.Tests.dll
 
 artifacts:
-- path: build/AnyCPU/$(configuration)
-  name: vvvv-Message
+- path: build/AnyCPU/$(configuration)/vvvv-Time
+  name: vvvv-Time
   type: WebDeployPackage
 
-- path: build/AnyCPU/$(configuration)/core/SharpMessage.dll
+- path: build/AnyCPU/$(configuration)/vvvv-Time/core/.dll
   name: dll
 
-- path: '**\SharpMessage*.nupkg'
-  name: SharpMessage
+- path: '**\VVVV.Packs.Time*.nupkg'
+  name: VVVV.Packs.Time
   type: NuGetPackage
 
 deploy:
@@ -82,7 +82,7 @@ deploy:
   description: Automatic Deployment powered by AppVeyor
   auth_token:
     secure: GMMqt9Z8X4poG9NQFBGrbi4hiVnj5Qc1XIWmfl0rdqi8mJevjvECGKRlyIYy07aO
-  artifact: vvvv-Message dll
+  artifact: VVVV.Packs.Time dll
   prerelease: $(IsPrerelease)
   on:
     #allow all branches
