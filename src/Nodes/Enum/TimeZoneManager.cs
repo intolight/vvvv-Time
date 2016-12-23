@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using VVVV.PluginInterfaces.V2;
 
-namespace VVVV.Packs.Time
+namespace VVVV.Packs.Timing
 {
     internal class TimeZoneManager
     {

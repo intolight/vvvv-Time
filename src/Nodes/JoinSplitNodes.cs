@@ -4,7 +4,7 @@ using System.ComponentModel.Composition;
 using VVVV.Core.Logging;
 using VVVV.PluginInterfaces.V2;
 
-namespace VVVV.Packs.Time.Nodes
+namespace VVVV.Packs.Timing.Nodes
 {
 
     #region PluginInfo

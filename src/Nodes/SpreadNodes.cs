@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using VVVV.Nodes;
-using VVVV.Packs.Time;
+using VVVV.Packs.Timing;
 using VVVV.PluginInterfaces.V2;
 using VVVV.Nodes.Generic;
 using VVVV.Utils.Streams;
 
-namespace VVVV.Packs.Time.Nodes
+namespace VVVV.Packs.Timing.Nodes
 {
     #region PluginInfo
     [PluginInfo(Name = "Sort", Category = "Time", Help = "Sorts a spread of times. For that the internal UTC represantation is used.", Tags = "", Author = "tmp")]

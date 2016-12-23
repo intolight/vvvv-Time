@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using VVVV.Core.Logging;
-using VVVV.Packs.Time;
+using VVVV.Packs.Timing;
 using VVVV.PluginInterfaces.V2;
 
-namespace VVVV.Packs.Time.Nodes
+namespace VVVV.Packs.Timing.Nodes
 {
 
     #region PluginInfo

@@ -2,9 +2,9 @@
 using System.ComponentModel.Composition;
 using VVVV.Core.Logging;
 using VVVV.PluginInterfaces.V2;
-using VVVV.Packs.Time;
+using VVVV.Packs.Timing;
 
-namespace VVVV.Packs.Time.Nodes
+namespace VVVV.Packs.Timing.Nodes
 {
 
     #region PluginInfo
@@ -56,13 +56,13 @@ namespace VVVV.Packs.Time.Nodes
     {
         #region fields & pins
         [Input("Time")]
-        public ISpread<VVVV.Packs.Time.Time> FInput;
+        public ISpread<VVVV.Packs.Timing.Time> FInput;
 
         [Input("TimeSpan")]
         public ISpread<TimeSpan> FTimeSpan;
 
         [Output("Time")]
-        public ISpread<VVVV.Packs.Time.Time> FOutput;
+        public ISpread<VVVV.Packs.Timing.Time> FOutput;
 
         [Output("Success")]
         public ISpread<Boolean> FSuccess;
@@ -99,10 +99,10 @@ namespace VVVV.Packs.Time.Nodes
     {
         #region fields & pins
         [Input("Time 1")]
-        public ISpread<VVVV.Packs.Time.Time> FInput1;
+        public ISpread<VVVV.Packs.Timing.Time> FInput1;
 
         [Input("Time 2")]
-        public ISpread<VVVV.Packs.Time.Time> FInput2;
+        public ISpread<VVVV.Packs.Timing.Time> FInput2;
 
         [Output("TimeSpan")]
         public ISpread<TimeSpan> FOutput;

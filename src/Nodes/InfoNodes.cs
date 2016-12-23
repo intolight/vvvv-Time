@@ -7,7 +7,7 @@ using VVVV.PluginInterfaces.V2;
 
 #endregion usings
 
-namespace VVVV.Packs.Time.Nodes
+namespace VVVV.Packs.Timing.Nodes
 {
 
     #region PluginInfo
@@ -17,7 +17,7 @@ namespace VVVV.Packs.Time.Nodes
     {
         #region fields & pins
         [Output("Time")]
-        public ISpread<VVVV.Packs.Time.Time> FOutput;
+        public ISpread<VVVV.Packs.Timing.Time> FOutput;
 
         [Output("Daylight Saving Time")]
         public ISpread<bool> FDaylightSavingTime;

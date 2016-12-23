@@ -1,8 +1,8 @@
 ﻿using System;
 using VVVV.PluginInterfaces.V2;
-using VVVV.Packs.Time;
+using VVVV.Packs.Timing;
 
-namespace VVVV.Packs.Time.Nodes
+namespace VVVV.Packs.Timing.Nodes
 {
 
     #region PluginInfo

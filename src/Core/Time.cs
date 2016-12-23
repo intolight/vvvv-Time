@@ -2,7 +2,7 @@ using System;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
-namespace VVVV.Packs.Time
+namespace VVVV.Packs.Timing
 {
     //[DataContract]
     [Serializable]
