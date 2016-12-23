@@ -62,7 +62,7 @@ after_build:
 - ps: nuget pack src/core/VVVV.Packs.Time.nuspec -version "$env:nugetVersion"
 
 artifacts:
-- path: build/AnyCPU/$(configuration)/vvvv-Time
+- path: build/AnyCPU/$(configuration)/
   name: vvvv-Time
   type: WebDeployPackage
 
@@ -79,7 +79,7 @@ deploy:
   description: Automatic Deployment powered by AppVeyor
   auth_token:
     secure: GMMqt9Z8X4poG9NQFBGrbi4hiVnj5Qc1XIWmfl0rdqi8mJevjvECGKRlyIYy07aO
-  artifact: VVVV.Packs.Time dll
+  artifact: vvvv-Time dll
   prerelease: $(IsPrerelease)
   on:
     #allow all branches

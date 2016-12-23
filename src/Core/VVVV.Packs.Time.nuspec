@@ -6,7 +6,6 @@
     <authors>tmp</authors>
     <licenseUrl>https://www.gnu.org/licenses/lgpl-3.0.en.html</licenseUrl>
     <projectUrl>https://github.com/intolight/vvvv-Time</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/velcrome/vvvv-Message/master/copy/assets/icon/icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Core library for including Time in your plugins.</description>
     <releaseNotes>Notes</releaseNotes>
@@ -17,6 +16,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="..\..\build\AnyCPU\Release\vvvv-Message\core\VVVV.Packs.Timing.*" target="lib\net46\" />
+    <file src="..\..\build\AnyCPU\Release\vvvv-Time\core\VVVV.Packs.Timing.*" target="lib\net46\" />
   </files>
 </package>
