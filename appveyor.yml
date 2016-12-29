@@ -85,7 +85,7 @@ deploy:
 
 - provider: NuGet
   api_key:
-    secure: 0hhwaeSEUfUNsjinrtuxpRwIAhwnpo4CdmcVd9nQtxh6kdSLnU1jJkPVRW+sDxkS
+    secure: LgJL439GK62fl41zcWlo7CaUryBHVgBXE4GomYg2Xo2upXM8vrMpHDR+Y37lAwQR
   skip_symbols: true
   artifact: VVVV.Packs.Time
   on:
