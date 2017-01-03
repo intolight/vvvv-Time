@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>VVVV.Packs.Time</id>
+    <id>VVVV.Packs.Timing</id>
     <version>$version$</version>
     <authors>tmp</authors>
+    <owners>intolight</owners>
     <licenseUrl>https://www.gnu.org/licenses/lgpl-3.0.en.html</licenseUrl>
     <projectUrl>https://github.com/intolight/vvvv-Time</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -12,7 +13,7 @@
     <copyright>intolight</copyright>
     <tags>Timezone Datetime</tags>
     <dependencies>
-      <dependency id="Newtonsoft.Json" version="8.0.1" />
+      <dependency id="Newtonsoft.Json" version="9.0.1" />
     </dependencies>
   </metadata>
   <files>
