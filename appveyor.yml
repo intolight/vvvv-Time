@@ -57,7 +57,7 @@ build:
   verbosity: minimal
 
 after_build:
-- ps: nuget pack src/core/VVVV.Packs.Time.nuspec -version "$env:nugetVersion"
+- ps: nuget pack src/core/VVVV.Packs.Timing.nuspec -version "$env:nugetVersion"
 
 artifacts:
 - path: build/AnyCPU/$(configuration)/
