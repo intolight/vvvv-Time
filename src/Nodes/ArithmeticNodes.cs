@@ -212,4 +212,41 @@ namespace VVVV.Packs.Timing.Nodes
             }
         }
     }
+
+    #region PluginInfo
+    [PluginInfo(Name = "Multiply", Category = "Time", Version = "TimeSpan", Help = "Scales a timespan", Tags = "", Author = "velcrome")]
+    #endregion PluginInfo
+    public class MultiplyTimeSpanNode : IPluginEvaluate
+    {
+        #region fields & pins
+        [Input("TimeSpan")]
+        public ISpread<TimeSpan> FTimeSpan;
+
+        [Input("Scalar")]
+        public ISpread<long> FInput;
+
+        [Output("TimeSpan")]
+        public ISpread<TimeSpan> FOutput;
+
+        [Import()]
+        public ILogger FLogger;
+
+        #endregion fields & pins
+        public void Evaluate(int SpreadMax)
+        {
+            FOutput.SliceCount = SpreadMax;
+            for (int i = 0; i < SpreadMax; i++)
+            {
+                try
+                {
+                    FOutput[i] = new TimeSpan(FTimeSpan[i].Ticks * FInput[i]);
+
+                }
+                catch (Exception e)
+                {
+                    FLogger.Log(LogType.Debug, e.ToString());
+                }
+            }
+        }
+    }
 }
